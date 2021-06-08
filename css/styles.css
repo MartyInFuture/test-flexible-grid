@@ -1,0 +1,34 @@
+:root {
+  --container-width: 600px;
+  --margin: 40px;
+  --reverse-margin: -40px;
+  --item-in-line: 3;
+}
+
+.container {
+  width: var(--container-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: var(--reverse-margin);
+  margin-left: var(--reverse-margin);
+}
+
+.item {
+  height: 100px;
+  width: calc(
+    (100% - var(--margin) * var(--item-in-line)) / var(--item-in-line)
+  );
+  background-color: red;
+  margin-top: var(--margin);
+  margin-left: var(--margin);
+}
